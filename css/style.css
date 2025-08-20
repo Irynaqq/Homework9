@@ -249,3 +249,86 @@ a {
 .footer__description {
   font-size: 0.8125rem;
 }
+
+@media (max-width: 767px) {
+  .header {
+    padding-top: 44px;
+    padding-bottom: 72px;
+  }
+
+  .navbar {
+    margin-bottom: 48px;
+  }
+
+  .navbar__list {
+    row-gap: 6px;
+  }
+
+  .hero {
+    max-width: 100%;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__title {
+    margin: 0 0 20px;
+  }
+
+  .hero__description {
+    margin: 0 0 24px;
+  }
+
+  .section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .experience__container {
+    grid-template-columns: 1fr;
+    gap: var(--gap-md);
+    justify-items: center;
+  }
+
+  .experience-item {
+    justify-content: center;
+  }
+
+  .video {
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    margin-bottom: 80px;
+  }
+
+  .hero {
+    max-width: 80%;
+  }
+
+  .section {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+
+  .experience__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--gap-md);
+  }
+
+  .experience-item__value {
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    margin-bottom: 120px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
+  }
+}
