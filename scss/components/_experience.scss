@@ -1,0 +1,48 @@
+@use '../utils/variables' as v;
+@use '../utils/media';
+
+.experience {
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  padding: 100px 0;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: v.$gap-lg;
+
+    @include media.mobile {
+      justify-content: center;
+      gap: v.$gap-md;
+    }
+
+    @include media.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: v.$gap-md;
+    }
+  }
+}
+
+.experience-item {
+  display: flex;
+  gap: v.$gap;
+
+  @include media.mobile {
+    justify-content: center;
+  }
+
+  &__value {
+    font-size: 1.3125rem;
+    font-weight: v.$font-weight-medium;
+
+    @include media.tablet {
+      font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    }
+  }
+
+  &__picture {
+    order: -1;
+  }
+}

@@ -1,0 +1,11 @@
+@use '../utils/variables' as v;
+
+.container {
+  width: min(100% - v.$gap-lg, v.$container-primary);
+  margin-inline: auto;
+}
+
+.container-sm {
+  width: min(100% - v.$gap-lg, v.$container-sm);
+  margin-inline: auto;
+}

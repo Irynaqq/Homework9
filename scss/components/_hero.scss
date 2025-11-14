@@ -1,0 +1,41 @@
+@use '../utils/variables' as v;
+@use '../utils/mixins';
+@use '../utils/media';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 540px;
+  margin-left: calc(v.$gap-sm * -1);
+
+  @include media.mobile {
+    max-width: 100%;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 44px;
+
+    @include media.mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 56px;
+    color: v.$color-secondary;
+
+    @include media.mobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__button {
+    @include mixins.button-primary(v.$color-primary);
+    min-width: 225px;
+    min-height: 65px;
+  }
+}

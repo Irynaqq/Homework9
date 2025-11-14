@@ -1,0 +1,49 @@
+@use '../utils/variables' as v;
+@use '../utils/media';
+
+.navbar {
+  margin-bottom: 162px;
+
+  @include media.mobile {
+    margin-bottom: 48px;
+  }
+
+  @include media.tablet {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$gap-sm v.$gap-md;
+    margin-left: calc(v.$gap-sm * -1);
+
+    @include media.mobile {
+      row-gap: 6px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: v.$gap-sm 0;
+    letter-spacing: v.$letter-spacing-md;
+    text-transform: uppercase;
+
+    &--active {
+      color: v.$color-primary;
+      font-weight: v.$font-weight-medium;
+    }
+
+    &:hover::after {
+      content: '';
+      position: absolute;
+      left: calc(v.$gap-sm * -1);
+      right: calc(v.$gap-sm * -1);
+      bottom: 0;
+      height: 3px;
+      background-color: v.$color-primary;
+      border-radius: 3px;
+    }
+  }
+}

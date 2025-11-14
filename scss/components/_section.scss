@@ -1,0 +1,30 @@
+@use '../utils/variables' as v;
+@use '../utils/media';
+
+.section {
+  padding-top: 110px;
+  padding-bottom: 90px;
+  text-align: center;
+
+  @include media.mobile {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  &__title {
+    font-weight: v.$font-weight-medium;
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    color: v.$color-secondary;
+  }
+}
+
+.about {
+  background-color: v.$color-white;
+}
+
+.process {
+  background-color: v.$color-light;
+}

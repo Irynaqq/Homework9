@@ -1,0 +1,14 @@
+@use '../utils/variables' as v;
+@use '../utils/media';
+@use '../utils/mixins';
+
+.header {
+  padding-top: 67px;
+  padding-bottom: 144px;
+  background-color: v.$color-light;
+
+  @include media.mobile {
+    padding-top: 44px;
+    padding-bottom: 72px;
+  }
+}

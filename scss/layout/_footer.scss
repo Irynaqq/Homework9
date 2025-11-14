@@ -1,0 +1,17 @@
+@use '../utils/variables' as v;
+
+.footer {
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  padding: 50px 0;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: v.$font-weight-medium;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    font-size: 0.8125rem;
+  }
+}

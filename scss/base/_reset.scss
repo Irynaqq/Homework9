@@ -1,0 +1,32 @@
+@use '../utils/variables' as v;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html {
+  font-size: v.$font-size;
+  font-family: v.$font-primary;
+  line-height: v.$line-height-sm;
+  font-weight: v.$font-weight-normal;
+}
+
+a {
+  text-decoration: none;
+  color: v.$color-black;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: v.$font-weight-medium;
+  line-height: v.$line-height-sm;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: v.$font-weight-medium;
+  line-height: v.$line-height-sm;
+}
