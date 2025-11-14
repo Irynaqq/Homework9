@@ -10,12 +10,15 @@ Refactoring “Simple Site” with SCSS
 
 ✔ 2. Декомпозиція коду
 
-Проєкт поділено на логічні модулі:scss/
+Проєкт поділено на логічні модулі:
+
+  scss/
   utils/        – змінні, міксіни, медіа-міксіни
   base/         – базові стилі (reset, typography)
   layout/       – контейнер, шапка, футер
   components/   – компоненти (hero, navbar, experience, video, section)
   main.scss     – точка входу (@use)
+
 ✔ 3. Використання SCSS-змінних
 
 У файлі _variables.scss винесено:
